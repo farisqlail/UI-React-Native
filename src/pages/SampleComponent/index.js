@@ -9,11 +9,11 @@ import {
 
 const SampleComponent = () => {
     return (
-      <View>
+    <View>
       <View style={{width: 80, height: 80, backgroundColor: 'green'}} />
       <Text>Hello World</Text>
       <Text><Sambung/> belajar react native</Text>
-      <Photo />
+      {/* <Photo /> */}
       <TextInput style={{borderWidth: 1}} />
       <Profile />
     </View>
@@ -25,9 +25,10 @@ const SampleComponent = () => {
   };
   
   
-  const Photo = () => {
-    return <Image source={{uri: 'https://placeimg.com/100/100/animals'}} style={{width: 100, height: 100}}/>
-  };
+//   const Photo = () => {
+//     return 
+//     <Image source={{uri: 'https://placeimg.com/100/100/animals'}} style={{width: 100, height: 100}} />
+//   };
   
   class Profile extends Component {
     render() {

@@ -4,10 +4,37 @@ import {
     View,
     Image
 } from 'react-native';
-import laptop from './laptop.jpg';
+import laptop from '../../assets/images/laptop.jpg';
 
 class FlexBox extends Component {
+
+    constructor(props) {
+        super(props);
+        console.log('ini constructor');
+        this.state = {
+            portofolio: 'Faris',
+        }
+    }
+
+    componentDidMount() {
+        console.log('ini component did mount');
+        setTimeout(() => {
+            this.setState({
+                portofolio: 'Rizqilail',
+            })
+        }, 2000);
+    }
+
+    componentDidUpdate() {
+        console.log('ini component did update')
+    }
+
+    componentWillUnMount() {
+        console.log('ini will mount');
+    }
+
     render(){
+        console.log('ini render');
         return (
             <View>
                 <View style={{
@@ -24,7 +51,7 @@ class FlexBox extends Component {
                             color: 'white',
                             fontSize: 20,
                             fontWeight: 'bold'
-                            }}>First App</Text>
+                            }}>{this.state.portofolio}</Text>
                     </View>
                 </View>
 
@@ -61,7 +88,7 @@ class FlexBox extends Component {
                                 color: 'white',
                                 textAlign: 'center',
                                 paddingVertical: 4
-                            }}>Protofolio</Text>                            
+                            }}> Protofolio</Text>                            
                         </View>
                     </View>
                 </View>
